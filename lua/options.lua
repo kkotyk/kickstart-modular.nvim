@@ -50,8 +50,8 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+--vim.opt.list = true
+--vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -61,5 +61,37 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Set UTF-8 encoding
+vim.opt.encoding = "utf-8"
+
+-- Set tab-related options
+vim.opt.tabstop = 4           -- Number of spaces for a tab
+vim.opt.softtabstop= 4       -- Number of spaces for a tab in insert mode
+vim.opt.shiftwidth = 4        -- Number of spaces for auto-indentation
+vim.opt.autoindent = true     -- Enable auto-indentation
+vim.opt.expandtab = true     -- convert tabs to spaces
+
+-- Disable backup and swap files
+vim.opt.backup = false
+vim.opt.swapfile = false
+
+
+-- Automatically reload files when changed
+vim.opt.autoread = true
+
+-- Enable spell checking
+vim.opt.spell = true
+vim.opt.spelllang = "en"
+
+-- Highlight the 100th column
+vim.opt.colorcolumn = "100"
+
+-- Set text width
+vim.opt.textwidth = 80
+
+-- Expand signcolumn as needed
+vim.opt.signcolumn = "auto:2"
+
 
 -- vim: ts=2 sts=2 sw=2 et

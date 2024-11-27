@@ -45,4 +45,31 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+
+-- Map '<' in visual mode to shift text left and keep the selection
+vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
+
+-- Map '>' in visual mode to shift text right and keep the selection
+vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>ff", function()
+  require("telescope").extensions.smart_open.smart_open()
+end, { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>no', ':set invnumber<CR>', { noremap = true, silent = true })
+
+-- In Normal Mode, move up by 5 lines
+vim.keymap.set("n", "<S-Up>", "5k", { noremap = true, silent = true })
+
+-- In Visual Mode, extend selection up by 5 lines
+vim.keymap.set("v", "<S-Up>", "5k", { noremap = true, silent = true })
+
+-- In Normal Mode, move up by 5 lines
+vim.keymap.set("n", "<S-Down>", "5j", { noremap = true, silent = true })
+
+-- In Visual Mode, extend selection up by 5 lines
+vim.keymap.set("v", "<S-Down>", "5j", { noremap = true, silent = true })
+
 -- vim: ts=2 sts=2 sw=2 et
